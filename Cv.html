@@ -1,93 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Onyango Edwin - CV</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV - Onyango Edwin</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: #fff;
+}
+
+/* HEADER */
+.header {
+    background: #0f5c8c;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 100px 1fr 250px;
+    gap: 20px;
+    align-items: center;
+}
+
+.header img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.contact {
+    background: #0b3f63;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.contact p {
+    margin: 5px 0;
+}
+
+/* MAIN LAYOUT */
+.container {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+
+.left {
+    padding: 20px;
+}
+
+.section {
+    margin-bottom: 25px;
+}
+
+.section h2 {
+    border-bottom: 2px solid #0f5c8c;
+    padding-bottom: 5px;
+}
+
+.job {
+    margin-top: 10px;
+}
+
+.job h3 {
+    margin: 5px 0;
+}
+
+ul {
+    margin: 5px 0;
+}
+
+
+.right {
+    background: #1a1a1a;
+    padding: 20px;
+}
+
+.skill-bar {
+    background: #333;
+    height: 6px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.skill-fill {
+    background: #0f5c8c;
+    height: 100%;
+}
+
+/* INTERESTS */
+.interests li {
+    list-style: square;
+}
+</style>
+
 </head>
+
 <body>
 
-    <!-- Header Section -->
-    <h1>Onyango Edwin</h1>
+<!-- HEADER -->
+<div class="header">
+    <img src="https://photos.app.goo.gl/4HDJf3YZWRt7NyGZA" alt="profile photo" 
+     style="width:80px; height:80px;  border-radius: 50%;">
 
-    <!-- Profile Image (Male) -->
-    <img src="https://photos.app.goo.gl/4HDJf3YZWRt7NyGZA" alt="Onyango Edwin Photo" width="150">
+    <div>
+        <h1>Onyango Edwin</h1>
+        <p>Computer Science Student</p>
+        <p>I am a motivated Computer Science student with a strong foundation in programming, web development, and problem-solving. I have hands-on experience with technologies such as HTML, CSS, JavaScript, and databases, and I enjoy building efficient and user-friendly applications. I am passionate about continuous learning and exploring emerging fields like software engineering and machine learning. I am seeking opportunities to apply my skills in real-world projects while growing as a developer and contributing to innovative solutions.</p>
+    </div>
 
-    <hr>
+    <div class="contact">
+        <h3>Contact</h3>
+        <p>Email: onyango.edwin@strathmore.edu</p>
+        <p>Phone: +254 774689321</p>
+        <p>Nairobi, KENYA</p>
+        <p>Github: github.com/onyangoedwin</p>
+        <p>LinkedIn: linkedin.com/in/onyangoedwin</p>
+    </div>
+</div>
 
-    <!-- Contact Information -->
-    <h2>Contact Information</h2>
-    <p>Email: 254eddykenzo@gmail.com</p>
-    <p>Phone: +254 745679875</p>
-    <p>Location: Nairobi, Kenya</p>
+<!-- MAIN CONTENT -->
+<div class="container">
 
-    <hr>
+    <!-- LEFT -->
+    <div class="left">
 
-    <!-- Profile -->
-    <h2>Profile</h2>
-    <p>
-        A dedicated and hardworking individual with a passion for technology and problem-solving.
-        I am seeking opportunities to grow my skills and gain practical experience in the field of computing.
-    </p>
+        <div class="section">
+            <h2>Work Experience</h2>
 
-    <hr>
+            <div class="job">
+                <h3>Job Title</h3>
+                <p><b>Company Name</b> | 2023 – Present</p>
+                <ul>
+                    <li>Achievement with measurable results</li>
+                    <li>Another quantified achievement</li>
+                </ul>
+            </div>
 
-    <!-- Education -->
-    <h2>Education</h2>
-    <table border="1">
-        <tr>
-            <th>Year</th>
-            <th>Institution</th>
-            <th>Qualification</th>
-        </tr>
-        <tr>
-            <td>2020 - 2024</td>
-            <td>Strathmore University</td>
-            <td>BBIT</td>
-        </tr>
-    </table>
+            <div class="job">
+                <h3>Git and Version Control</h3>
+                <p><b>Airtel</b> | 2022 – 2023</p>
+                <ul>
+                    <li>Responsibility or achievement</li>
+                </ul>
+            </div>
+        </div>
 
-    <hr>
+        <div class="section">
+            <h2>Conferences & Courses</h2>
+            <p><b>Computer Science</b> – Cousera</p>
+            <p><b>Machine learning</b> – -edx</p>
+        </div>
 
-    <!-- Skills -->
-    <h2>Skills</h2>
-    <ul>
-        <li>HTML Basics</li>
-        <li>C++ Programming</li>
-        <li>Problem Solving</li>
-        <li>Teamwork</li>
-    </ul>
+    </div>
 
-    <hr>
+    <!-- RIGHT -->
+    <div class="right">
 
-    <!-- Experience -->
-    <h2>Experience</h2>
-    <p><strong>Intern - IT Department</strong></p>
-    <p>Assisted in troubleshooting systems and supporting technical operations.</p>
+        <div class="section">
+            <h2>Skills</h2>
 
-    <hr>
+            <p>HTML5</p>
+            <div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
 
-    <!-- Links -->
-    <h2>Links</h2>
-    <p>
-        GitHub: <a href="#">https://github.com/onyangoedwin</a>
-    </p>
+            <p>CSS3</p>
+            <div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
 
-    <hr>
+            <p>JavaScript</p>
+            <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
 
-    <!-- Simple Form (Bonus) -->
-    <h2>Contact Me</h2>
-    <form>
-        Name: <br>
-        <input type="text" name="name"><br><br>
+            <p>PHP</p>
+            <div class="skill-bar"><div class="skill-fill" style="width:70%"></div></div>
 
-        Email: <br>
-        <input type="email" name="email"><br><br>
+            <p>SQL</p>
+            <div class="skill-bar"><div class="skill-fill" style="width:65%"></div></div>
+        </div>
 
-        Message: <br>
-        <textarea name="message"></textarea><br><br>
+        <div class="section">
+            <h2>Education</h2>
+            <p><b>BSc Computer Science</b></p>
+            <p>Strathmore University</p>
+            <p>2022 – Present</p>
+        </div>
 
-        <input type="submit" value="Send">
-    </form>
+        <div class="section">
+            <h2>Interests</h2>
+            <ul class="interests">
+                <li>Machine Learning</li>
+                <li>Chess</li>
+                <li>Video Games</li>
+                <li>Robotics</li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
 
 </body>
 </html>
