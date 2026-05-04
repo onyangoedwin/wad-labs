@@ -14,16 +14,42 @@
     <title>GTA VI</title>
     <!--other elements that go here -->
     <!--styles, scripts,favicon -->
+    <style>
+        /* an element selector
+        /* example h1, we are selecting all haeding one's on this page
+        /*<h1> h1, <div> div, main, p, footer*/
+            h1{
+                /*a declaration*/
+                color:blue;
+                font: size 48px;
+            }
+            /*a class selector(starts with a dot)*/
+            /* class can have many elements*/
+            /*all the elements with a class of .section-heading*/
+            /*one or many elements*/
+            /*bbit*/
+            .section-heading{
+                color:green;
+
+            }
+            /*an id selector(starts with a #)*/
+            /*only one element*/
+            /*211200*/
+            #about{
+                background-color: aliceblue;
+
+            }
+    </style>
+    <!--an external styles-->
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 <!--6. the body(content goes here)-->
 
 <body>
-    <!-- Add header semantic tag -->
-    <!-- Add main heading -->
-    <!-- Make "Rockstar Games" bold -->
-    <header>
-        <!--h1, h2, h3, h4, h5, h6-->
+
+    <header style="background-color: lightcoral;">
+       
         <h1>Grand Theft Auto VI</h1>
         <p> <!--paragraph text-->
             The nect generation open-world crime game by
@@ -77,7 +103,7 @@
     <!-- Add main semantic tag -->
     <main>
         <section id="about" name="about">
-            <h2>About the Game</h2>
+            <h2 class="section-heading">About the Game</h2>
             <p>
              <b>GTA 6</b> is expected to take players back to <i>Vice City</i> with amassive open world,
              new charaters,and improved gameplay
@@ -87,7 +113,7 @@
         </section>
 
         <section id="features">
-            <h2>Expected Features</h2>
+            <h2 class="section-heading">Expected Features</h2>
 
             <h4>Gameplay Features</h4>
             <ul> <!--unorderd list-->
@@ -110,7 +136,7 @@
         </section>
 
         <section id="characters">
-            <h2>Main Characters</h2>
+            <h2 class="section-heading">Main Characters</h2>
             <article>
                 <h5>Lucia</h5>
                 <p>
@@ -133,7 +159,7 @@
         </section>
 
         <section id="logo">
-            <h2>Game Preview</h2>
+            <h2 class="section-heading">Game Preview</h2>
             <img src="https://www.rockstargames.com/VI/_next/image?url=%2FVI%2F_next%2Fstatic%2Fmedia%2FJason_and_Lucia_01_With_Logos_landscape.8596f77a.jpg&w=3840&q=75" 
             alt="GTA 6 Logo image" width="50%">
            
