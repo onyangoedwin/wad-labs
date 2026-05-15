@@ -66,12 +66,71 @@ Variables defined here become available everywhere in the stylesheet.
 
 body{
     font-family: 'Instrument Sans', sans-serif;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 400;/*normal, bold...*/
-    font-style: normal;
+    background-color: var(--col-cream);
+    /*shorthand*/
+    margin:0;
+    /*long hand version*/
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+
+    line-height: 1.7;
+
 }
 /*group selector*/
 h1, h2{
     font-family: 'Young Serif', serif;
+
+}
+
+header{
+    padding-top: 5px;
+    padding-bottom: 20px;
+
+    /*box model(border)*/
+    border-bottom-width:2px;
+    border-bottom-style:solid;
+    border-bottom-color: var(--col-cyan);
+
+    text-align: center;
+
+}
+
+/*various ways of selecting the main heading (h1) given or html
+h1(element)
+#mainHeading (id)
+.headings (class)
+descendant selector(all elements within another element)
+*/
+header h1{
+    /*
+
+       Units
+
+
+    */
+    font-size: 3.5em;/*3.5*16px  , parent font size*/
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    color: var(--col-coral);
+
+    /*box model*/
+    margin-left: 8px;
+    margin-bottom: 0;
+    margin-top: 0;
+    margin-right: 0;
+
+}
+/*
+direct child selector
+b
+*/
+header > b{
+    color:var(--col-sunset);
+    letter-spacing: 2px;
+    font-size: 0.95em;/*relative to the parent font size*/
 
 }
