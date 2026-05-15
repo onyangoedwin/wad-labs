@@ -132,5 +132,53 @@ header > b{
     color:var(--col-sunset);
     letter-spacing: 2px;
     font-size: 0.95em;/*relative to the parent font size*/
+}
 
+nav{
+    margin-top: 10px;
+}
+/*what selector is this?*/
+nav ul{
+    list-style: none;
+    padding: 0;/*top, bottom,left and right 0*/
+    margin: 0;/*all margins*/
+
+    /*change the display element to flex*/
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+}
+/*what selector is this?*/
+/* instead of using this, what other way could we select the
+a tag given our elements in index.html
+*/ 
+nav ul li a{
+    color: var(--col-bg-deep);
+    text-decoration: none;
+    font-size: 1.1em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+
+    /*what regions do each of the four padding areas have
+     padding-top?
+    padding-bottom?
+    padding-right?
+    padding-left?
+    */
+    padding: 8px 18px;
+    border: 1px solid var(--col-cyan-light);
+    /*long hand border rule*/
+    border-width: 1px;
+    border-style: solid;
+    border-color: var(--col-cyan-light);
+    border-radius: 8px;
+
+}
+
+/*pseudo-class selectors : hover, root*/
+nav ul li a:hover{
+    background-color: var(--col-cyan);
+    border-color: var(--col-pink-soft);
 }
