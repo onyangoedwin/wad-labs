@@ -155,4 +155,28 @@ console.log(Object.values(student));
 console.log(Object.entries(student));
 
 
+/* DOM - Document Object Model */
+console.log(document);
 
+//Elements on our page (variables)
+const heading=document.querySelector("#mainHeading");
+console.log(heading);
+const preview=document.querySelector("img");
+console.log(preview);
+const aboutSection=document.getElementById("about");
+console.log(aboutSection);
+
+//all the sections
+const sections=document.querySelectorAll("section");
+console.log(sections);
+
+const allNavLinks=document.querySelectorAll(".nav a");
+console.log(allNavLinks);
+
+//getting an element
+let aboutParagraphs=document.querySelectorAll("#about p");
+console.log(aboutParagraphs);
+
+//change its text
+aboutParagraph.textContent="This text was changed!";
+aboutParagraph.style.color="red";
