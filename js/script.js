@@ -143,16 +143,16 @@ let bbit_2b_students=[
 
 //print out the name of all students in bbit_2b_students using a loop
 bbit_2b_students.forEach(function(student){
-    console.log(student);
+    console.log(student.name);
 });
 //getting the keys of an object as an array
-console.log(student.keys().toArray());
+console.log(Object.keys(student));
 
 //getting the values of an object as an array
-console.log(student.values().toArray());
+console.log(Object.values(student));
 
 //getting both keys and values of an object as an array
-console.log(student.entries().toArray());
+console.log(Object.entries(student));
 
 
 
