@@ -178,5 +178,48 @@ let aboutParagraphs=document.querySelectorAll("#about p");
 console.log(aboutParagraphs);
 
 //change its text
-aboutParagraph.textContent="This text was changed!";
-aboutParagraph.style.color="red";
+aboutParagraphs.forEach(paragraph => {
+    paragraph.textContent = "This text was changed!";
+    paragraph.style.color = "red";
+});
+ 
+//setting/setters - updating the pafes on js
+const previewImage=document.querySelector("img");
+console.log(previewImage);
+
+//via the DOM
+previewImage.setAttribute("title", "This is a preview image");
+previewImage.setAttribute("alt", "This is the alternate text of the image");
+console.log(previewImage.alt);
+console.log(previewImage.title);
+
+//Event Handling - Events(User events - click, key event, scroll)
+//get element of interest - button with the id of changeTextBtn
+let changeTextBtn=document.querySelector("#changeTextBtn");
+let demoText=document.querySelector("#demoText");
+changeTextBtn.addEventListener("click", function(){
+    console.log("someone clicked me");
+    demoText.textContent="I have has been changed when you clicked me";
+    demoText.style.color="orange";
+    demoText.style.fontSize="10px";
+});
+
+//use case 2 
+let highlightSectionBtn=document.querySelector("#highlightSectionBtn");
+highlightSectionBtn.addEventListener("click", function(){
+    //one
+    document.querySelector("section").classList.toggle("section-highlight");
+    //highlight all the sections
+    //document.querySelectorAll("section").classlist.toggle("section-highlight");
+    document.querySelectorAll("section").forEach(function(section){
+        section.classList.toggle("section-highlight");
+    });
+})
+
+//get the textbox with with id of nameInput
+document.querySelector("#nameInput").addEventListener("input", function(event){
+
+    document.querySelector("#nameOutput").textContent=
+    "Hello "+ document.querySelector("#nameInput").value+ "!";
+    "Hello"+ document.querySelector("#nameInput").value+ "!";
+});
