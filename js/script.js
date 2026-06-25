@@ -287,7 +287,12 @@ wishListButton.addEventListener("click",function(event){
         let button = document.createElement("button");
         button.textContent = "Delete";
         li.textContent = wishListInputValue;
-        
+
+        //we are going to add an event listener with the new dynamic element
+        button.addEventListener("click", event=>{
+            li.remove();
+        });
+
         li.appendChild(button);
 
         //we append the list to the UL
@@ -297,6 +302,88 @@ wishListButton.addEventListener("click",function(event){
         wishlistInput.value = "";
     }
 
+
 });
 
-    
+// case 6b - removing items from the wish list
+let deleteButtons = document.querySelectorAll("#wishListItems button");
+console.log(deleteButtons);
+
+//iterate a.k.a loop through the buttons
+deleteButtons.forEach(button => {
+    button.addEventListener("click", event => {
+        //console.log("delete button clicked");
+        //how do we get the first list item in unorderd list
+        //given that the ul has an idof #wishListItems
+
+        //#wishlistItems li
+        //#wishlistItems>li
+        //#wishlistItems li:first
+
+        //querSelector- returns the first matching element
+        //let firstListItem = document.querySelector("#wishListItems li"); //first one
+        //firstListItem.remove();
+        //for one or for many
+        //<li>button>Delete</button></li>
+        //@TODO , how do you use parent, parentElement
+
+        button.closest("li").remove();
+        //button.parentElement.remove();
+
+});
+});
+
+//case 7 - form submission
+    //show what the user typed in the input fields when the form is submitted
+    let submitButton = document.querySelector("#feedbackForm button");
+    let feedbackForm= document.querySelector("#feedbackForm");
+    let feedbackOutput = document.querySelector("#feedbackOutput");
+    feedbackForm.addEventListener("submit", event=>{
+        // prevent the form from being submitted normally
+        event.preventDefault();
+ 
+       // console.log("submit button clicked");
+       //get the values of the input fields
+       const name = document.querySelector("#fanName");//name
+       const email = document.querySelector("#fanEmail");//email
+       const message = document.querySelector("#fanMessage");//message
+ 
+       feedbackOutput.innerHTML =
+       "<strong>Fan Feedback Submitted</strong> <br>" +
+       "<p>Name: " + name.value + "</p>" +
+       "<p>Email: " + email.value + "</p>" +
+       "<p>Message: " + message.value + "</p>";
+ 
+       //clear the input fields
+       
+       name.value = "";
+       email.value = "";
+       message.value = "";
+ 
+       //add sucesss styles to the output div
+         feedbackOutput.classList.add("success-text");
+       
+    });
+
+    //forgotten
+    let resetButton = document.querySelector("#resetButton");
+    resetBtn.addEventListner("click", event=>{
+        //undo the changed text
+        demoText.textContent = 
+        "Click the button to modify this text using JavaScript";
+        demoText.style.color = "white";
+        demoText.style.fontSize = "16px";
+
+        //undo the highlight of the sections
+        //toggle will remove if present or add if absent
+        document.querySelectorAll("section").forEach(function(section){
+            //section.classlist.toggle("section-highlight")
+
+          section.classList.remove("section-highlight");
+
+        });
+
+
+
+        
+    })
